@@ -30,5 +30,6 @@ router.post('/:id/leave', auth, studySessionController.leaveSession);
 router.post('/:id/notes', auth, noteValidation, studySessionController.addNote);
 router.post('/:id/flashcards', auth, flashcardValidation, studySessionController.addFlashcard);
 router.put('/:id/whiteboard', auth, studySessionController.updateWhiteboard);
+router.get('/leaderboard', auth, studySessionController.getLeaderboard);
 
 module.exports = router; 
