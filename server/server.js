@@ -4,6 +4,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const http = require('http');
 const socketIo = require('socket.io');
+const leaderboardRoutes = require('./routes/leaderboard');
 
 // Load environment variables
 dotenv.config();
@@ -83,6 +84,7 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/groups', require('./routes/groups'));
 app.use('/api/study-sessions', require('./routes/studySessions'));
 app.use('/api/resources', require('./routes/resources'));
+app.use('/api/leaderboard', leaderboardRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

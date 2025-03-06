@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "migrate:leaderboard": "node scripts/migrateLeaderboard.js",
+    "create:dummy": "node scripts/createDummyData.js",
+    "view:leaderboard": "node scripts/viewLeaderboard.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +24,6 @@
     "socket.io": "^4.6.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "nodemon": "^3.1.9"
   }
 }
